@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            .bod {
+                margin-left: 361px;
+                margin-top: 143px;
+                background-color: aqua;
+                height:190px;
+                width:426px;
+            }
+            h2 {
+                padding-left: 168px;
+                padding-top: 45px;
+            }
+            .mainC {
+                padding-top: 29px;
+                padding-left: 34px;
+            }
+            .heading {
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bod">
+            <div class="mainC">
+                <h3 class="heading">Even/Odd?</h3>
+                <label>Enter a number</label>
+                <input type="text" placeholder="enter a number" id="num"> 
+                <button onClick="document.getElementById('demo').innerHTML=oddOrEven()">submit</button>
+            </div>
+            <h2 id="demo"></h2>
+        </div>
+    <script>
+        function oddOrEven(){
+        var a=parseInt(document.getElementById('num').value);
+        if(a % 2 == 0)
+            return "even";
+        return "odd";
+    }
+    </script>
+    </body>
+</html>

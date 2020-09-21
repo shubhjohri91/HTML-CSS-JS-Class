@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> fibonacci.html </title>
+<style>
+      .bod1 {
+                margin-left: 361px;
+                margin-top: 143px;
+                background-color: aqua;
+                height:190px;
+                width:426px;
+            }
+            h2 {
+                padding-left: 168px;
+                padding-top: 45px;
+            }
+            .mainC1 {
+                padding-top: 29px;
+                padding-left: 34px;
+            }
+            #heading {
+                text-align:center;
+            }
+</style>
+</head>
+<body>
+    <script type="text/javascript">
+        function febinociiGenerator(){
+            var limit=document.getElementById('num').value;
+            var f1=0;
+            var f2=1;
+            var series=[];
+           series.push(f1);
+           series.push(f2);
+           console.log(series);
+           var i,f3;
+           for(i=2; i<limit; i++)
+           {
+             f3=f1+f2;
+             series.push(f3);
+             f1=f2;
+             f2=f3;
+            }
+        console.log(series)
+        document.getElementById('s').innerHTML = series;
+        
+        }
+        </script>
+
+    <div class="bod1">
+        <div class="mainC1">
+            <h3 id="heading">Febinocii series</h3>
+            <label>Enter a number</label>
+            <input type="number" placeholder="enter a number" id="num"> 
+            <button onClick="febinociiGenerator()">submit</button>
+            <h2 id="s"></h2>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
