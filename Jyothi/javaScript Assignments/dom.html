@@ -25,8 +25,8 @@
   <img src="https://etc.usf.edu/presentations/extras/letters/varsity_letters/37/16/D-400.png" id="myImg" class="img" width='100'>
 
   <hr>
-  <a href="" onclick="townHousePics('next'); return false;">Next</a>
-  <a href="" onclick="townHousePics('previous'); return false;">Previous</a>
+  <button onclick="townHousePics('next'); return false;">Next</button>
+  <button onclick="townHousePics('previous'); return false;">Previous</button>
   <img src="https://i.pinimg.com/originals/00/4b/1c/004b1c2dfb73bfca2be90dd5d1da189c.jpg" id="j" class="img" width='100'>
   <script>
 
@@ -83,7 +83,12 @@ function townHousePics(direction) {
             curImage = 0;
         }
     } else {
-        curImage--;
+      curImage--;
+       if(curImage<0)
+       {
+        curImage=4;
+       }
+       
         // even reset the counter here when
         // its getting 0
     }
