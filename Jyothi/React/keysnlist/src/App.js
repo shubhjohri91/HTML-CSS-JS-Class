@@ -54,6 +54,7 @@ class App extends Component {
         })
       }
         </table>
+        <br></br>
         <button onClick={this.addItem}>Add</button>
         <button onClick={this.deleteItem}>Delete</button>
         <hr></hr>
