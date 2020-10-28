@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import ImageScrolling from './ImageScrolling';
 import './App.css';
+import Parent from './components/Parent';
+import DataBinding from './components/DataBinding';
+
 
 class App extends Component {
   state = {
+    title: 'web-page',
     users : [{
       name: 'John',
       age: 30
@@ -34,6 +38,12 @@ class App extends Component {
     this.setState({ users: tempUsers })
     }
 
+    handleChild=(newtitle)=>{
+      this.setState({
+        title:newtitle
+      })
+    }
+
   render() {
     const  { users } = this.state
     return (
@@ -59,6 +69,13 @@ class App extends Component {
         <button onClick={this.deleteItem}>Delete</button>
         <hr></hr>
        <ImageScrolling></ImageScrolling>
+       <hr></hr>
+       <Parent  title={this.state.title} handleFirstChild={this.handleChild.bind(this, 'first child')} handleSecondChild={this.handleChild.bind(this, 'second child')}></Parent>
+      <DataBinding></DataBinding>
+      <hr></hr>
+      <p>
+        ustry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+         </p>
       </div>
     );
   }
