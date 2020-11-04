@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.blue {
+  text-align: center;
+  color: blueviolet;
+  background: lightblue;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.blue-button {
+  background: darkblue;
+  color: blue;
+}
+
+.red {
+  text-align: center;
+  color: maroon;
+  background: crimson;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.red-button {
+  background: darkred;
+  color: orange;
+}
